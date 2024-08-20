@@ -20,21 +20,16 @@ public class BinaryTree<E> {
     }
     
     public boolean isLeaf(){
-        // root no esta vacio
         if (!this.isEmpty()){
             return root.getLeft() == null && root.getRight() == null;
-            // return root.getLeft().isEmpty() && root.getRight().isEmpty();
         }
         return false;
     }
     
     public int countLeavesRecursive(){
-        // Caso base 1: Árbol vacío
         if(this.isEmpty()){
             return 0;
         }
-        
-        // Caso base 2: El árbol es una hoja
         else if (this.isLeaf()){
             return 1;
         }
@@ -55,18 +50,8 @@ public class BinaryTree<E> {
     }
     
     public int countLeavesIterative() {
-        // Algoritmo
-        // Contar las hojas
-        // Iterar o recorrer
-        
-        // contador
         int leaves=0;
-        
-        // Pila que almacenará los elementos del árbol que no han sido visitados
         Stack<BinaryTree<E>> s = new Stack();
-        
-        // Caso base 1: Árbol vacÍo
-        
         if (!this.isEmpty()){
             s.push(this);
             
@@ -91,22 +76,11 @@ public class BinaryTree<E> {
     
     
     public void recorrerPreorden(){
-        
-        // 1. Imprimir a la raiz
-        // 2. recorrer preorden en hijo izquierdo
-        // 3. recorrer preorden en hijo derecho
-        
         if (!this.isEmpty()) {
-            
-            // 1. Imprimir a la raiz
             System.out.println(this.root.getContent());
-            
-            // 2. recorrer preorden en hijo izquierdo
             if (root.getLeft()!=null) {
                 root.getLeft().recorrerPreorden(); 
             }
-        
-            // 3. recorrer preorden en hijo derecho
             if (root.getRight()!=null) {
                 root.getRight().recorrerPreorden(); 
             }
@@ -116,35 +90,22 @@ public class BinaryTree<E> {
     public void recorrerPostorden(){
         
         if (!this.isEmpty()){
-            
-            // 1. recorrer postorden en hijo izquierdo
             if (root.getLeft()!=null){
                 root.getLeft().recorrerPostorden(); 
             }
-        
-            // 2. recorrer postorden en hijo derecho
             if (root.getRight()!=null){
                 root.getRight().recorrerPostorden(); 
             }
-            
-            // 3. Imprimir a la raiz
             System.out.println(this.root.getContent());
         }
     }
     
     public void recorrerEnorden(){
-        
         if (!this.isEmpty()){
-            
-            // 1. recorrer enorden en hijo izquierdo
             if (root.getLeft()!=null){
                 root.getLeft().recorrerEnorden(); 
             }
-        
-            // 2. Imprimir a la raiz
             System.out.println(this.root.getContent());
-            
-            // 3. recorrer enorden en hijo derecho
             if (root.getRight()!=null){
                 root.getRight().recorrerEnorden(); 
             }
@@ -152,8 +113,6 @@ public class BinaryTree<E> {
         }
     }
     
-    
-
     public NodeBinaryTree<E> getRoot() {
         return root;
     }
