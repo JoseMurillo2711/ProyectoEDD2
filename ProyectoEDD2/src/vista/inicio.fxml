@@ -31,60 +31,7 @@
           <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="4.0" prefHeight="8.0" vgrow="SOMETIMES" />
         </rowConstraints>
-         <children>
-            <Label text="Marca:" GridPane.columnIndex="1">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <ChoiceBox fx:id="cbMarca" prefHeight="26.0" prefWidth="146.0" GridPane.columnIndex="2" />
-            <Label text="Modelo:" GridPane.columnIndex="4">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <ChoiceBox fx:id="cbModelo" prefHeight="26.0" prefWidth="133.0" GridPane.columnIndex="5" />
-            <Label text="Categoría:" GridPane.columnIndex="6">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <ChoiceBox fx:id="cbCategoria" prefHeight="26.0" prefWidth="133.0" GridPane.columnIndex="7" />
-            <TextField fx:id="tfAnioMin" promptText="Año Mínimo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="tfAnioMax" promptText="Año Máximo" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="tfKilometrajeMin" promptText="Kilometraje Mínimo" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <TextField fx:id="tfKilometrajeMax" promptText="Kilometraje Máximo" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Label text="Transmisión:" GridPane.columnIndex="6" GridPane.rowIndex="1">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <ChoiceBox fx:id="cbTransmision" prefHeight="26.0" prefWidth="133.0" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
-            <Label text="Tipo de costo:" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <ChoiceBox fx:id="cbTipoCosto" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField fx:id="tfPrecioMin" promptText="Precio Mínimo" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <TextField fx:id="tfPrecioMax" promptText="Precio Máximo" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Button fx:id="btnFiltrar" style="-fx-background-color: #030759;" text="Filtrar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></Button>
-            <Button fx:id="btnReset" mnemonicParsing="false" style="-fx-background-color: #030759;" text="Quitar filtro" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="3">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></Button>
-         </children>
       </GridPane>
       <TilePane fx:id="tilePane" prefHeight="225.0" prefWidth="500.0" />
-      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="463.0" spacing="10.0">
-         <children>
-            <Button fx:id="btnAnterior" style="-fx-background-color: #030759;" text="Anterior" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button fx:id="btnSiguiente" style="-fx-background-color: #030759;" text="Siguiente" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-         </children>
-      </HBox>
    </children>
 </VBox>
