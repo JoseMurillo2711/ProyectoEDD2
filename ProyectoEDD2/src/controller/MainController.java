@@ -31,10 +31,6 @@ import static util.Utilitario.abrirNuevaVentana;
  */
 public class MainController implements Initializable {
     @FXML
-    private Button btnBuscar;
-    @FXML
-    private TextField txtBusqueda;
-    @FXML
     private BorderPane rootBorderPane;
     @FXML
     private HBox hbIniciarSesion;
@@ -47,20 +43,9 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        formatoEncabezado();
         this.usuario = UsuarioDataManager.getInstance().getUsuarioActual();
         configIniciales();
-        cargarPagina("inicio");
-    }
-
-
-    private void formatoEncabezado() {
-        ImageView lupa = new ImageView(new Image("recursos/lupa.png"));
-        lupa.setFitHeight(20);
-        lupa.setFitWidth(25);
-        this.btnBuscar.setGraphic(lupa);
-        Tooltip tltp = new Tooltip("Buscar carro");
-        this.btnBuscar.setTooltip(tltp);
+//        cargarPagina("inicio");
     }
 
     private void configIniciales() {
@@ -76,7 +61,6 @@ public class MainController implements Initializable {
             this.hbIniciarSesion.setVisible(false);
             this.hbIniciarSesion.setManaged(false);
         }
-        this.txtBusqueda.setPromptText("Buscar un auto...");
     }
 
     @FXML
@@ -96,7 +80,6 @@ public class MainController implements Initializable {
     @FXML
     private void inicioDePagina(MouseEvent event) {
         cargarPagina("inicio");
-        this.txtBusqueda.setPromptText("Buscar un auto...");
     }
 
     public void cargarPagina(String fxmlFile) {
@@ -105,7 +88,6 @@ public class MainController implements Initializable {
             Node pagina = loader.load();
             rootBorderPane.setCenter(pagina);
         } catch (IOException e) {
-            e.printStackTrace();
             Alertas.alertaError("Ha ocurrido un error", e.getMessage());
         }
     }
@@ -118,8 +100,6 @@ public class MainController implements Initializable {
     }
 
     private void cerrarVentana() {
-        Stage ventanaActual = (Stage) this.btnBuscar.getScene().getWindow();
-        ventanaActual.close();
     }
 
     private void mostrarVentanaDeInicioSesion() {
@@ -127,11 +107,9 @@ public class MainController implements Initializable {
         cerrarVentana();
     }
 
-
     @FXML
     private void irPaginaPrincipal(ActionEvent event) {
         cargarPagina("inicio");
-        this.txtBusqueda.setPromptText("Buscar un auto...");
     }
 
     public void showSearchBar() {
