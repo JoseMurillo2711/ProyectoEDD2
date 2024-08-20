@@ -13,10 +13,8 @@ public class ProyectoEDD1 extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            // Cargar el archivo FXML
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/main.fxml"));
             Parent root = loader.load();
-            // Configurar la escena y el escenario principal
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Mi Aplicación JavaFX");

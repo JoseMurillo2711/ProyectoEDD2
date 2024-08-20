@@ -76,7 +76,7 @@
          <left>
             <VBox alignment="CENTER" prefHeight="413.0" prefWidth="121.0" spacing="5.0" style="-fx-background-color: #BF8F84;" stylesheets="@../estilos/lateral.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Juego" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#irPaginaPrincipal" text="Juego" />
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Preguntas"/>
                </children>
                <padding>
